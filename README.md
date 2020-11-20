@@ -1,1 +1,2 @@
-# portfolioapp
+# LibraryProject
+NodeJS + MongoDB + Handlebars
