@@ -17,18 +17,6 @@ footer {
     font-size      : 24px;
 }
 
-/* header {
-    flex-shrink: 0;
-}
-
-main {
-    flex: 1 0 auto;
-}
-
-footer {
-    flex-shrink: 0;
-} */
-
 .logo {
     font-family : 'Roboto', sans-serif;
     font-style  : normal;
@@ -40,15 +28,61 @@ footer {
     color       : #000000;
 }
 
-.container {
-    display       : flex;
-    flex-direction: row;
-    flex-wrap     : wrap;
-    margin        : 0 5%;
+.logo > a {
+    text-decoration: none;
 }
 
-/* Проекты index */
-.project-preview {
-    display: block;
-    flex   : 1 1 auto;
+.logo > a:visited, a:active, a:hover {
+    color: #000000;
 }
+
+.container {
+    display        : block;
+    margin         : 0 5%;
+}
+
+.container > * {
+    margin-bottom: 1rem;
+}
+
+.container > *:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Проекты index */
+.projects {
+    display        : flex;
+    flex-direction : row;
+    flex-wrap      : wrap;
+    justify-content: space-evenly;
+    gap            : 1rem;
+}
+
+.project-card {
+    display  : block;
+    flex     : 1 1 0;
+    min-width: 45%;
+}
+
+.project-card img {
+    max-height: 100%;
+    max-width : 100%;
+    object-fit: cover;
+}
+
+.project-card > .title {
+    text-align: center;
+}
+
+@media (min-width: 576px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {
+    .project-card {
+        min-width: 20%;
+    }
+}
+
+@media (min-width: 1200px) {}

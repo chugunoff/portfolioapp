@@ -1,8 +1,18 @@
 const Project = require('../models/project')
 
 // Страница добавления проекта
-exports.addProject = (req, res) => {
-    res.render('newproject.hbs');
+exports.manageProjects = (req, res) => {
+    Project.find({}, (err, allProjects) => {
+
+        if (err) {
+            console.log(err);
+            return res.sendStatus(404);
+        }
+
+        res.render('projects.hbs', {
+            projects: allProjects
+        });
+    });
 };
 
 // Обработчик POST запроса добавления проекта

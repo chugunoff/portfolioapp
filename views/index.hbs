@@ -1,12 +1,16 @@
-<h1>Список пользователей</h1>
+{{!-- <h1>Список пользователей</h1> --}}
+
 <div class="container">
-    {{#each projects}}
-    <div class="project-preview">
-        <div>
-            <img src="{{this.image}}">
-        </div>
-        <div>{{this.name}}</div>
-        <div>{{this.description}}</div>
+    <div>
+        <a href="projects">Редактировать проекты</a>
     </div>
-    {{/each}}
+    <div class="projects">
+        {{#each projects}}
+        <div class="project-card">
+            <img src="{{this.image}}">
+            <div class="title">{{this.name}}</div>
+            {{!-- <div>{{this.description}}</div> --}}
+        </div>
+        {{/each}}
+    </div>
 </div>
