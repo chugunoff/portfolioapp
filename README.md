@@ -1,2 +1,2 @@
-# LibraryProject
-NodeJS + MongoDB + Handlebars
+# Portfolio Project
+Node.JS + MongoDB + Handlebars
