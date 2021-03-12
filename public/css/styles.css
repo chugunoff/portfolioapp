@@ -28,24 +28,26 @@ footer {
     color       : #000000;
 }
 
-.logo > a {
+.logo>a {
     text-decoration: none;
 }
 
-.logo > a:visited, a:active, a:hover {
+.logo>a:visited,
+a:active,
+a:hover {
     color: #000000;
 }
 
 .container {
-    display        : block;
-    margin         : 0 5%;
+    display: block;
+    margin : 0 5%;
 }
 
-.container > * {
+.container>* {
     margin-bottom: 1rem;
 }
 
-.container > *:last-child {
+.container>*:last-child {
     margin-bottom: 0;
 }
 
@@ -71,8 +73,52 @@ footer {
     object-fit: cover;
 }
 
-.project-card > .title {
+.project-card>.title {
     text-align: center;
+}
+
+/* Проекты projects */
+.project-list {}
+
+.project-list .project-row {
+    display        : flex;
+    flex-direction : row;
+    flex-wrap      : wrap;
+    justify-content: space-between;
+}
+
+.project-row>div {
+    margin: 0 1rem;
+}
+
+.project-row .preview-img {
+    display: block;
+    flex   : 1 1 0;
+}
+
+.project-row .description {
+    display: block;
+    flex   : 5 1 0;
+}
+
+.project-row .buttons {
+    display        : flex;
+    flex           : 1 1 0;
+    flex-direction : row;
+    flex-wrap      : wrap;
+    justify-content: space-evenly;
+    align-items    : center;
+}
+
+.project-row .buttons svg {
+    width : 40px;
+    height: 40px;
+}
+
+.project-row img {
+    max-height: 100%;
+    max-width : 100%;
+    object-fit: cover;
 }
 
 @media (min-width: 576px) {}

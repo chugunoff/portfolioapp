@@ -45,6 +45,20 @@ exports.postProject = (req, res) => {
         res.send("Файл загружен");
 }
 
+exports.delProject = (req, res) => {
+    if (!req.body) return res.sendStatus(404);
+
+    let _id = req.body._id;
+
+    console.log(_id);
+
+    Project.findByIdAndDelete(_id, (err, res) => {
+        if (err) return console.log(err);
+
+        console.log(res);
+    });
+}
+
 // Получить все проекты, используем на index
 exports.getProjects = (req, res) => {
     Project.find({}, (err, allProjects) => {

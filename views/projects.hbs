@@ -2,9 +2,15 @@
     <h1>Проекты</h1>
     <div class="project-list">
         {{#each projects}}
-        <div class="project-row">
-            <img src="{{this.image}}"></img>
-            <div class="title">{{this.name}}</div>
+        <div id="{{this._id}}" class="project-row">
+            <div class="preview-img">
+                <img src="{{this.image}}"></img>
+            </div>
+            <div class="description">
+                <div>{{this.name}}</div>
+                <div>{{this.description}}</div>
+                <div>{{this._id}}</div>
+            </div>
             <div class="buttons">
                 <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="edit"
                     class="svg-inline--fa fa-edit fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg"
